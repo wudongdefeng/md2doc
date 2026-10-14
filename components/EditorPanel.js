@@ -3,7 +3,42 @@ import { useState } from 'react';
 export default function EditorPanel() {
   const [markdown, setMarkdown] = useState('# 示例文档\n\n写点内容，然后点击导出');
   const [title, setTitle] = useState('示例文档');
-  const [css, setCss] = useState('body { font-family: "Helvetica Neue", Arial, sans-serif; } h1 { color: #0b5cff }');
+  const [css, setCss] = useState(`body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 11pt;
+  line-height: 1.6;
+  color: #222222;
+  margin: 0;
+  padding: 0;
+}
+
+h1 { font-size: 24pt; margin: 0 0 0.5em; font-weight: 700; }
+h2 { font-size: 18pt; margin: 0.9em 0 0.4em; font-weight: 600; }
+h3 { font-size: 14pt; margin: 0.8em 0 0.3em; font-weight: 600; }
+
+p { margin: 0 0 0.9em; }
+
+a { color: #0b5cff; text-decoration: underline; }
+
+ul, ol { margin: 0 0 0.9em 1.4em; }
+
+code { font-family: Menlo, Monaco, "Courier New", monospace; background: #f6f8fa; padding: 2px 6px; border-radius: 4px; font-size: 10pt; }
+pre { background: #f6f8fa; padding: 12px; border-radius: 6px; overflow: auto; font-family: Menlo, Monaco, "Courier New", monospace; font-size: 10pt; }
+
+table { border-collapse: collapse; width: 100%; margin: 0 0 0.9em; }
+table th, table td { border: 1px solid #dddddd; padding: 8px; text-align: left; }
+
+thead th { background: #f3f4f6; }
+
+img { max-width: 100%; height: auto; display: block; margin: 0.6em 0; }
+
+blockquote { margin: 0 0 0.9em; padding-left: 12px; border-left: 4px solid #eee; color: #555555; }
+
+hr { border: none; border-top: 1px solid #e6e6e6; margin: 1em 0; }
+
+/* small helpers for Word-like spacing */
+p, li { orphans: 3; widows: 3; }
+`);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
 
