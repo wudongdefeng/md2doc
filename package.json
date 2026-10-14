@@ -1,14 +1,17 @@
 {
   "name": "md2doc",
-  "version": "0.1.0",
-  "description": "CLI: convert Markdown to .docx and provide an online conversion endpoint",
+  "version": "0.2.0",
+  "description": "CLI + Web: convert Markdown to .docx with a prettier web UI and Vercel deployment",
   "main": "src/convert.js",
   "bin": {
     "md2doc": "bin/md2doc.js"
   },
   "scripts": {
     "cli": "node bin/md2doc.js",
-    "start": "node src/server.js",
+    "legacy-server": "node src/server.js",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "test": "node bin/md2doc.js example/example.md -o example/output.docx"
   },
   "keywords": [
@@ -29,6 +32,10 @@
     "html-to-docx": "^2.0.0",
     "express": "^4.18.2",
     "multer": "^1.4.5-lts.1",
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "next": "^13.4.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^8.0.7"
   }
 }
