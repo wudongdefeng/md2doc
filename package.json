@@ -1,0 +1,34 @@
+{
+  "name": "md2doc",
+  "version": "0.1.0",
+  "description": "CLI: convert Markdown to .docx and provide an online conversion endpoint",
+  "main": "src/convert.js",
+  "bin": {
+    "md2doc": "bin/md2doc.js"
+  },
+  "scripts": {
+    "cli": "node bin/md2doc.js",
+    "start": "node src/server.js",
+    "test": "node bin/md2doc.js example/example.md -o example/output.docx"
+  },
+  "keywords": [
+    "markdown",
+    "md",
+    "docx",
+    "convert",
+    "cli",
+    "server",
+    "online"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "fs-extra": "^11.1.1",
+    "marked": "^5.1.1",
+    "html-to-docx": "^2.0.0",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "cors": "^2.8.5"
+  }
+}
