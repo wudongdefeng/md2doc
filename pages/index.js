@@ -2,7 +2,6 @@
 import React, { useState, useRef } from 'react';
 import Head from 'next/head';
 import ReactMarkdown from 'react-markdown';
-import '../styles/globals.css';
 
 export default function Home() {
   const [markdown, setMarkdown] = useState('# 示例文档\n\n这是一个更漂亮的在线 Markdown 转 Word 示例。');
